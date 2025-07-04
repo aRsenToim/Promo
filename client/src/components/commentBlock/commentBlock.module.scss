@@ -2,15 +2,20 @@
     background-color: #FFEBEB;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 100%;
+    display: block;
     border-radius: 10px;
     padding: 15px;
+    text-decoration: none;
     margin: 10px 0px;
     &__header{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin: 10px 0px;
+        color: #000;
     }
     &__content{
         margin: 5px 0px;
+        color: #000;
     }
 }

@@ -37,3 +37,12 @@ export const createComment = (name: string, content: string, idPost: string) => 
     })
   }
 }
+
+
+export const getArticleMarker = (marker: string) => {
+  return (dispatch: AppDispatch) => {
+    ArticleApi.getArticlesMarkers(marker).then(data => {
+      dispatch(setArticles(data))
+    })
+  }
+}

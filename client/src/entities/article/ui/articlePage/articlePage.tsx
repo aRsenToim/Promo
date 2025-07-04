@@ -9,15 +9,17 @@ interface IProps {
     date: Date,
     isChange: boolean,
     view: number,
-    desc: string
+    desc: string,
+    marker: string
 }
 
-const ArticlePage: FC<IProps> = ({ title, image, content, date, isChange, view, desc }) => {
+const ArticlePage: FC<IProps> = ({ title, image, content, date, marker, isChange, view, desc }) => {
     const newDate = useDate(date)
 
     return <div className={s.ArticlePage}>
         <div className={s.ArticlePage__header}>
             <h1 className={s.ArticlePage__title}>{title}</h1>
+            <div className={s.ArticlePage__marker}>{marker}</div>
             <p className={s.ArticlePage__text}>{desc}</p>
             <div className={s.ArticlePage__desc}>
                 <p className={s.ArticlePage__date}>{newDate.day} {newDate.monthName} {newDate.year} года</p>

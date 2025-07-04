@@ -2,10 +2,12 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { useSelector, type TypedUseSelectorHook } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { articleSlice } from '../entities/article'
+import { CommentsSlice } from '../entities/Admin'
 
 
 const rootReducers = combineReducers({
-    articleSlice
+    articleSlice,
+    CommentsSlice
 })
 
 

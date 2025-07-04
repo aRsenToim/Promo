@@ -6,10 +6,21 @@ import * as uuid from 'uuid'
 class ArticlesController {
     async getArticles(req, res) {
         try {
-            const article = await prisma.article.findMany()
-            res.json(article)
+            const markers = req.query.marker
+            if (markers) {
+                const articles = await prisma.article.findMany({
+                    where: {
+                        markers: markers
+                    }
+                })
+                res.json(articles)
+            } else {
+                const article = await prisma.article.findMany()
+                res.json(article)
+            }
+
         } catch (error) {
-            res.error(error.message)
+            res.send(error.message)
         }
     }
     async getArticle(req, res) {
@@ -20,7 +31,7 @@ class ArticlesController {
                     id
                 }
             })
-            if(!article){
+            if (!article) {
                 throw new SyntaxError('Article not found')
             }
             await prisma.article.update({
@@ -53,7 +64,7 @@ class ArticlesController {
                     id,
                     title,
                     content,
-                    markers,
+                    markers: markers.toLocaleLowerCase(),
                     desc,
                     image: fileName,
                     isChange: false,

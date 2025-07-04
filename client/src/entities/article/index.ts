@@ -1,4 +1,4 @@
-import { createComment, getAllArticles, getArticleFetch } from './actions/ArticleActions'
+import { createComment, getAllArticles, getArticleFetch, getArticleMarker } from './actions/ArticleActions'
 import articleSlice from './model/articleSlice'
 import ArticleCard from './ui/articleCard/articleCard'
 import ArticleCatalog from './ui/ArticleCatalog/ArticleCatalog'
@@ -14,5 +14,6 @@ export {
     ArticleCatalog, 
     ArticlePage,
     CreateComment,
-    createComment
+    createComment,
+    getArticleMarker
 }

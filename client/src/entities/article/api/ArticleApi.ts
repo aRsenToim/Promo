@@ -11,5 +11,9 @@ export const ArticleApi = {
     async getArticle(id: string){
         const data = await axios.get<IArticle | IError>(this.baseUrl + `/${id}`)
         return data.data
+    },
+    async getArticlesMarkers(marker: string){
+        const data = await axios.get<IArticle[]>(`${this.baseUrl}?marker=${marker.toLocaleUpperCase()}`)
+        return data.data
     }
 }

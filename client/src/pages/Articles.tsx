@@ -1,12 +1,23 @@
-import { type FC } from "react"
+import { useEffect, type FC } from "react"
 import { useParams } from "react-router-dom"
+import { useAppDispatch, useAppSelector } from "../App/appStore"
+import { ArticleCatalog, getArticleMarker } from "../entities/article"
 
 
 
 const Articles: FC = () => {
     const { id } = useParams<string>()
+    const {articles} = useAppSelector(state => state.articleSlice)
+    const dispatch = useAppDispatch()
+
+    useEffect(() => {
+        if(id){
+            dispatch(getArticleMarker(id))
+            
+        }
+    }, [id])
     return <div>
-        Articles {id}
+        {articles ? <ArticleCatalog title={`${id} articles: `} articles={articles}/> : null}
     </div>
 }
 

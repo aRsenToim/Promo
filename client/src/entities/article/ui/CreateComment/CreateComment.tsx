@@ -13,7 +13,10 @@ const CreateComment: FC<IProps> = ({create}) => {
         <h3 className={s.CreateComment__title}>Добавить комментарий</h3>
         <Input value={name} setValue={(v: string) => setName(v)} label='Ваше имя' placeholder='Введите ваше имя'/>
         <Textarea value={content} setValue={(v: string) => setContent(v)} label='Ваш комментарий' placeholder='Введите ваш комментрий'/>
-        <Button onclick={() => {create(name, content)}} title='Добавить комментарий'/>
+        <Button onclick={() => {
+            create(name, content)
+            setContent('')
+            }} title='Добавить комментарий'/>
     </div>
 }
 
