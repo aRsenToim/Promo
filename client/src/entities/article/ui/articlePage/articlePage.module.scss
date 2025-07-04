@@ -1,0 +1,38 @@
+.ArticlePage{
+    margin: 15px 0px;
+
+    &__header{
+
+    }
+    &__image{
+        width: 100%;
+        object-fit: cover;
+    }
+    &__title{
+        font-size: 50px;
+    }
+    &__text{
+        font-size: 18px;
+        margin: 7px 0px;
+        color: #888888;
+    }
+    &__desc{
+        margin: 10px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__date{
+    }
+    &__content{
+        margin: 20px 0px;
+        font-size: 20px;
+    }
+    &__rigth{
+        display: flex;
+        align-items: center;
+        p{
+            margin-left: 10px;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Article {
+  id       String    @id
+  title    String
+  image    String
+  content  String
+  date     DateTime  @default(now())
+  isChange Boolean
+  view     Int
+  markers  String
+  desc     String
+  comments Comment[]
+}
+
+model Comment {
+  id        String   @id @default(uuid())
+  content   String
+  date      DateTime @default(now())
+  name      String
+  Article   Article? @relation(fields: [articleId], references: [id])
+  articleId String?
+}

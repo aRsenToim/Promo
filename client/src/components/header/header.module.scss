@@ -1,0 +1,32 @@
+.Header{
+    padding: 10px 0px;
+    background-color: #8EC1DB;  
+    &__items{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 0px auto;
+    } 
+    &__item{
+        list-style: none;
+        margin: 0px 30px;
+    }
+    &__link{
+        text-decoration: none;
+        color: #000;
+    }
+    &__logo{
+
+    }
+    &__image{
+        width: 50px;
+
+    }
+}
+
+.HeaderConteiner{
+    display: flex;
+    align-items: center;
+    margin: 0px auto;
+    width: 85%;
+}

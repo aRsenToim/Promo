@@ -1,0 +1,12 @@
+.CreateComment {
+    background-color: #cfcfcf;
+    margin: 0px auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    margin: 15px 0px;
+    border-radius: 15px;
+    padding: 15px;
+    &__title{
+        margin: 5px 0px;
+    }
+}

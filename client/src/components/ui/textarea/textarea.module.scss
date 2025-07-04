@@ -1,0 +1,19 @@
+.TextareaForm {
+    &__label {
+        color: #959595;
+    }
+
+    &__textarea {
+        display: block;
+        width: 100%;
+        padding: 13px 16px 13px 20px;
+        outline: none;
+        border: 1px solid transparent;
+        font-size: 15px;
+        font-weight: 500;
+        color: #000;
+        margin: 10px 0px;
+        min-height: 200px;
+        resize: none;
+    }
+}

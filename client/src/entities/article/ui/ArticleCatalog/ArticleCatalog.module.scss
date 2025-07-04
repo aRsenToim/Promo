@@ -1,0 +1,10 @@
+.ArticleCatalog{
+    &__title{
+        margin: 15px;
+    }
+    &__items{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
